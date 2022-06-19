@@ -1,0 +1,6 @@
+{
+	"type": "object",
+	"properties": {
+		"locales": { "type": "array", "items": { "type": "string" } }
+	}
+}

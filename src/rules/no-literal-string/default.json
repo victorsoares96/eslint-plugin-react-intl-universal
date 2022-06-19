@@ -1,0 +1,59 @@
+{
+	"mode": "jsx-text-only",
+	"jsx-components": {
+		"include": [],
+		"exclude": ["Trans"]
+	},
+	"jsx-attributes": {
+		"include": [],
+		"exclude": ["className", "styleName", "style", "type", "key", "id", "width", "height"]
+	},
+	"words": {
+		"exclude": ["[0-9!-/:-@[-`{-~]+", "[A-Z_-]+"]
+	},
+	"callees": {
+		"exclude": [
+			"intl(ext)?",
+			"get",
+			"set",
+			"put",
+			"post",
+			"delete",
+			"patch",
+			"append",
+			"getHTML",
+			"determineLocale",
+			"formateHTMLMessage",
+			"formatMessage",
+			"getInitOptions",
+			"init",
+			"load",
+			"describe",
+			"it",
+			"push",
+			"require",
+			"addEventListener",
+			"removeEventListener",
+			"postMessage",
+			"getElementById",
+			"dispatch",
+			"commit",
+			"includes",
+			"indexOf",
+			"endsWith",
+			"startsWith",
+			"on",
+			"emit"
+		]
+	},
+	"object-properties": {
+		"include": [],
+		"exclude": ["[A-Z][a-z]+", "^#[0-9a-f]{3,6}$"]
+	},
+	"class-properties": {
+		"include": [],
+		"exclude": ["displayName"]
+	},
+	"message": "disallow literal string",
+	"should-validate-template": true
+}
