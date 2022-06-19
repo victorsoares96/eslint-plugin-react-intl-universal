@@ -3,7 +3,7 @@ name: Continuous Integration
 on: [pull_request, push]
 
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,12 +18,48 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn --frozen-lockfile
+        env:
+          CI: true
+
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
       - name: Linting
         run: yarn lint:fix
+        env:
+          CI: true
+
+  type-check:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
       - name: Type Check
         run: yarn type-check
+        env:
+          CI: true
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Unit Testing
         run: yarn test:coverage
+        env:
+          CI: true
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Build
         run: yarn build
         env:
