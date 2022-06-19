@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-react-intl-universal",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "ESLint plugin for React Intl Universal",
 	"main": "lib/index.js",
 	"private": false,
@@ -33,8 +33,16 @@
 		"internationalization",
 		"react-intl-universal"
 	],
-	"author": "Victor Soares",
-	"license": "MIT",
+  "repository": "https://github.com/victorsoares96/eslint-plugin-react-intl-universal",
+  "author": "Victor Soares <vitorsoares96@hotmail.com> (https://github.com/victorsoares96)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorsoares96/eslint-plugin-react-intl-universal/issues"
+  },
+  "homepage": "https://github.com/victorsoares96/eslint-plugin-react-intl-universal#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
 	"devDependencies": {
 		"@types/eslint": "8.4.2",
 		"@types/estree": "0.0.51",
@@ -63,7 +71,7 @@
 	"lint-staged": {
 		"*.@(ts|tsx)": [
 			"npm run lint",
-			"npm run fix",
+			"npm run lint:fix",
 			"npm run type-check"
 		]
 	},

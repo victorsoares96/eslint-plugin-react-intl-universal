@@ -1,9 +1,11 @@
-name: build
+name: Continuous Deployment
 
-on: [pull_request, push]
+on:
+  release:
+    types: [created]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,9 +20,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn --frozen-lockfile
-      - name: Format check
-        run: yarn format:check
-      - name: Unit Testing
-        run: yarn test
-        env:
-          CI: true
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+      - if: steps.publish.outputs.type != 'none'
+        run: |
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
