@@ -33,8 +33,16 @@
 		"internationalization",
 		"react-intl-universal"
 	],
-	"author": "Victor Soares",
-	"license": "MIT",
+  "repository": "https://github.com/victorsoares96/eslint-plugin-react-intl-universal",
+  "author": "Victor Soares <vitorsoares96@hotmail.com> (https://github.com/victorsoares96)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorsoares96/eslint-plugin-react-intl-universal/issues"
+  },
+  "homepage": "https://github.com/victorsoares96/eslint-plugin-react-intl-universal#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
 	"devDependencies": {
 		"@types/eslint": "8.4.2",
 		"@types/estree": "0.0.51",
