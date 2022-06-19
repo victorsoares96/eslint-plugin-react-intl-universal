@@ -18,9 +18,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn --frozen-lockfile
-      - name: Format check
-        run: yarn format:check
+      - name: Linting
+        run: yarn lint:fix
+      - name: Type Check
+        run: yarn type-check
       - name: Unit Testing
-        run: yarn test
+        run: yarn test:coverage
         env:
           CI: true
