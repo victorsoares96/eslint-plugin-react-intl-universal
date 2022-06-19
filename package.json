@@ -1,6 +1,6 @@
 {
-	"name": "eslint-plugin-react-intl-universal-test",
-	"version": "1.0.1",
+	"name": "eslint-plugin-react-intl-universal",
+	"version": "1.0.2",
 	"description": "ESLint plugin for React Intl Universal",
 	"main": "lib/index.js",
 	"private": false,
