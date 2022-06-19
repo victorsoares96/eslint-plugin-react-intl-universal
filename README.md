@@ -43,8 +43,8 @@ or
 
 ## Supported Rules
 
-* [id-missing](docs/rules/id-missing.md) - This rule was based on the rule in this repository.
-* [no-literal-string](docs/rules/no-literal-string.md) - This rule aims to avoid developers to display literal string directly to users without translating them.
+* [id-missing](src/docs/id-missing.md) - This rule was based on the rule in this repository.
+* [no-literal-string](src/docs/no-literal-string.md) - This rule aims to avoid developers to display literal string directly to users without translating them.
 
 ## Thanks
 * [eslint-plugin-react-intl](https://github.com/godaddy/eslint-plugin-react-intl) by [GoDaddy](https://github.com/godaddy), many parts of my project were based on yours.
