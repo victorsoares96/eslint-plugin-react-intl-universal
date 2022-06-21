@@ -8,4 +8,15 @@ export = {
 		'no-use-intl': noUseIntl,
 		'id-missing': idMissing,
 	},
+	configs: {
+		recommended: {
+			plugins: [
+				'react-intl-universal'
+			],
+			rules: {
+				'react-intl-universal/no-literal-string': 'error',
+				'react-intl-universal/id-missing': 'error',
+			},
+		},
+	},
 }

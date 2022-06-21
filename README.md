@@ -6,10 +6,10 @@ eslint-plugin-react-intl-universal
 ## Installation
 
 ```sh
-$ npm install eslint-plugin-react-intl-universal
+$ npm install eslint-plugin-react-intl-universal --save-dev
 ```
 ```sh
-$ yarn add eslint-plugin-react-intl-universal
+$ yarn add -D eslint-plugin-react-intl-universal
 ```
 
 ## Usage
@@ -40,6 +40,8 @@ or
   "extends": ["plugin:react-intl-universal/recommended"]
 }
 ```
+
+* By default `id-missing` rule, list of locale files, defaults to `['locales/en-US.json']`
 
 ## Supported Rules
 
