@@ -45,7 +45,7 @@
   },
 	"devDependencies": {
 		"@types/eslint": "8.4.2",
-		"@types/estree": "0.0.51",
+		"@types/estree": "0.0.52",
 		"@types/jest": "^28.1.2",
 		"@types/lodash": "^4.14.182",
 		"@types/node": "16.11.39",
