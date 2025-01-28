@@ -24,7 +24,7 @@ jobs:
         run: yarn type-check
       - name: Unit Testing
         run: yarn test:coverage
-      - uses: codecov/codecov-action@v2
+      - uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           files: ./coverage/clover.xml # optional
